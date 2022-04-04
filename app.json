@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "WonChaPedia",
+    "slug": "WonChaPedia",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "WonChaPedia"
+}
