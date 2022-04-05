@@ -6,6 +6,8 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { Asset, useAssets } from 'expo-asset';
 import  * as Font  from 'expo-font';
 import Ionicons from '@expo/vector-icons/Ionicons'
+import { NavigationContainer } from '@react-navigation/native';
+import Tabs from './navigation/tabs';
 
 export default function App() {
   //use Hooks
@@ -17,13 +19,12 @@ export default function App() {
   } 
   
   return (
-    <View style={styles.container}>
-      <Text>App Loading is Done!!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-  
+    <NavigationContainer>
+      <Tabs />
+    </NavigationContainer>
+  )
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -32,4 +33,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
