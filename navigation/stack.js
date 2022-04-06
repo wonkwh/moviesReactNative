@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import colors from "../colors";
 
 const StackNavigator = createNativeStackNavigator();
@@ -17,10 +17,15 @@ const ScreenTwo = ({ navigation: { navigate } }) => (
   </TouchableOpacity>
 );
 
-const ScreenThree = ({ navigation: { setOptions } }) => (
-  <TouchableOpacity onPress={() => setOptions({ title: "Hello!" })}>
-    <Text> change title </Text>
-  </TouchableOpacity>
+const ScreenThree = ({ navigation: { navigate, setOptions } }) => (
+  <View>
+    <TouchableOpacity onPress={() => setOptions({ title: "Hello!" })}>
+      <Text> change title </Text>
+    </TouchableOpacity>
+    <TouchableOpacity onPress={() => navigate("Tabs", { screen: "Search" })}>
+      <Text> goto search tab </Text>
+    </TouchableOpacity>
+  </View>
 );
 
 const Stacks = () => (

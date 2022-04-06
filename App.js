@@ -1,17 +1,11 @@
 import AppLoading from "expo-app-loading";
 import React, { useState } from "react";
-import { StyleSheet, useColorScheme } from "react-native";
+import { StyleSheet } from "react-native";
 import { Asset, useAssets } from "expo-asset";
 import * as Font from "expo-font";
 import Ionicons from "@expo/vector-icons/Ionicons";
-
-import {
-  NavigationContainer,
-  DarkTheme,
-  DefaultTheme,
-} from "@react-navigation/native";
-import Tabs from "./navigation/tabs";
-import Stacks from "./navigation/stack";
+import { NavigationContainer } from "@react-navigation/native";
+import Root from "./navigation/root";
 
 export default function App() {
   //use Hooks
@@ -24,7 +18,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stacks />
+      <Root />
     </NavigationContainer>
   );
 }
